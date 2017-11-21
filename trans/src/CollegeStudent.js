@@ -43,7 +43,7 @@ var CollegeStudent = function (_Student) {
 exports.default = CollegeStudent;
 
 
-var jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 4);
+var jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 6);
 // jenkins use override the super cass fail exam method
 console.log(jenkins.failExam());
 //# sourceMappingURL=CollegeStudent.js.map

@@ -6,12 +6,12 @@ import  Student from './../src/Student';
 const expect = chai.expect;
 const assert = chai.assert;
 // write tests for the college student class
-const Jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 4 );
+const Jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 6 );
 const studentInfo = {
 				'name':'Jenkins',
 				'dateOfAdmision': 2017,
 				'nameOfSchool':'Delsu',
-				'durationOfStudy': 4,
+				'durationOfStudy': 6,
 				'expectedToGraduate': 2021
 			}
 

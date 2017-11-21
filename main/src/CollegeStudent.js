@@ -12,6 +12,6 @@ class CollegeStudent extends Student {
 export  default CollegeStudent;
 
 
-const jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 4 );
+const jenkins = new CollegeStudent('Jenkins', 2016, 'Uniport', 6 );
 // jenkins use override the super cass fail exam method
 console.log(jenkins.failExam());

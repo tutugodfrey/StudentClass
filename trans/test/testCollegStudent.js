@@ -17,12 +17,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var expect = _chai2.default.expect;
 var assert = _chai2.default.assert;
 // write tests for the college student class
-var Jenkins = new _CollegeStudent2.default('Jenkins', 2016, 'Uniport', 4);
+var Jenkins = new _CollegeStudent2.default('Jenkins', 2016, 'Uniport', 6);
 var studentInfo = {
 	'name': 'Jenkins',
 	'dateOfAdmision': 2017,
 	'nameOfSchool': 'Delsu',
-	'durationOfStudy': 4,
+	'durationOfStudy': 6,
 	'expectedToGraduate': 2021
 };
 

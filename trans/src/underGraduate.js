@@ -1,5 +1,9 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _student = require('./student');
@@ -34,6 +38,7 @@ var UnderGraduate = function (_Student) {
 		key: 'writeProject',
 		value: function writeProject(topic) {
 			this.projectTopic = topic;
+			return this.projectTopic;
 		}
 		// check if the student have writen his/her project
 
@@ -49,10 +54,12 @@ var UnderGraduate = function (_Student) {
 	return UnderGraduate;
 }(_student2.default);
 
+exports.default = UnderGraduate;
+
 var promise = new UnderGraduate('Promise', 2016, 'Uniport', 4);
 // user the super class failExam method
 console.log(UnderGraduate.welcome('Uniport', 'Promise'));
-promise.writeProject("My bootcamp projects");
+promise.writeProject('My bootcamp projects');
 console.log(promise.checkProjectWritten("My bootcamp projects"));
 console.log(promise.failExam());
 //# sourceMappingURL=underGraduate.js.map
