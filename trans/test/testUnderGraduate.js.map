@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../main/test/testUnderGraduate.js"],"names":[],"mappings":";;AACA;;;;AACA;;;;AACA","file":"testUnderGraduate.js","sourcesContent":["\r\nimport chai from 'chai';\r\nimport CollegeStudent from './../src/underGraduate';\r\nimport  Student from './../src/Student';"]}

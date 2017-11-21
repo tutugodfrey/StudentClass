@@ -10,6 +10,8 @@ var _CollegeStudent2 = _interopRequireDefault(_CollegeStudent);
 
 var _Student = require('./../src/Student');
 
+var _Student2 = _interopRequireDefault(_Student);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var expect = _chai2.default.expect;

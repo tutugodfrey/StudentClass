@@ -1,7 +1,7 @@
 
 import chai from 'chai';
 import CollegeStudent from './../src/CollegeStudent';
-import { Student } from './../src/Student';
+import  Student from './../src/Student';
 
 const expect = chai.expect;
 const assert = chai.assert;
