@@ -27,7 +27,13 @@ var Student = exports.Student = function () {
 	_createClass(Student, [{
 		key: 'admitted',
 		value: function admitted(name, dateOfAdmission, nameOfSchool) {
-			if (this.name === name && this.dateOfAdmission === dateOfAdmission && this.nameOfSchool === nameOfSchool) {
+			if (this.name !== name) {
+				return false;
+			} else if (this.dateOfAdmission !== dateOfAdmission) {
+				return false;
+			} else if (this.nameOfSchool !== nameOfSchool) {
+				return false;
+			} else if (this.name === name && this.dateOfAdmission === dateOfAdmission && this.nameOfSchool === nameOfSchool) {
 				return true;
 			}
 		}
@@ -46,10 +52,13 @@ var Student = exports.Student = function () {
 					'name': this.name,
 					'dateOfAdmision': this.dateOfAdmission,
 					'nameOfSchool': this.nameOfSchool,
-					'durationOfStudy': this.durationOfStudy
+					'durationOfStudy': this.durationOfStudy,
+					'expectedToGraduate': this.expectedToGraduate
 				};
 			}
 		}
+		// tell whether the student is still studying or not
+
 	}, {
 		key: 'graduate',
 		value: function graduate(name, currentYear) {
