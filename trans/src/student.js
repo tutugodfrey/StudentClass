@@ -71,8 +71,17 @@ var Student = exports.Student = function () {
 				}
 			}
 		}
+	}, {
+		key: 'failExam',
+		value: function failExam() {
+			return "You are on probation";
+		}
 	}]);
 
 	return Student;
 }();
+
+var goodLuck = new Student('Goodluck', 2017, 'Delsu', 4);
+console.log(goodLuck.failExam());
+console.log(goodLuck.getStudentInfo('Goodluck'));
 //# sourceMappingURL=student.js.map

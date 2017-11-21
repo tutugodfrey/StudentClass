@@ -49,6 +49,15 @@ export class Student {
 				return yearsRemaining;
 			}
 		} 
+	}
 
+	failExam(){
+		return "You are on probation";
 	}
 } 
+
+
+const goodLuck = new Student('Goodluck', 2017, 'Delsu', 4 );
+console.log(goodLuck.failExam())
+console.log(goodLuck.getStudentInfo('Goodluck'))
+

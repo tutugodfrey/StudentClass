@@ -4,7 +4,7 @@
   "description": "studentclass in an oop implementation that model the method and behavior of stuents",
   "main": "index.js",
   "scripts": {
-    "test": "mocha trans/test/test.js",
+    "test": "mocha trans/test/",
     "build": "babel main -s -d trans",
     "start:test": "npm run build && npm run test"
   },
