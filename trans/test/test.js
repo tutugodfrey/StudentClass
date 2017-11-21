@@ -10,10 +10,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var expect = _chai2.default.expect;
 
-var goodLuck = new _student.Student("Goodluck", 2012, "Delsu", 4);
+var goodLuck = new _student.Student("Goodluck", 2017, "Delsu", 4);
 var studentInfo = {
 	'name': 'Goodluck',
-	'dateOfAdminsion': 2012,
+	'dateOfAdmision': 2017,
 	'nameOfSchool': 'Delsu',
 	'durationOfStudy': 4
 };
@@ -27,16 +27,19 @@ describe("Student class", function () {
 			expect(goodLuck).to.be.an("Object");
 		});
 		it("should be confirmed as admitted to a school", function () {
-			expect(goodLuck.admitted("Goodluck", 2012, "Delsu")).to.be.equal(true);
+			expect(goodLuck.admitted("Goodluck", 2017, "Delsu")).to.be.equal(true);
 		});
 		it("class instance should be an object", function () {
-			expect(goodLuck.getYearOfAdminssion('Goodluck')).to.be.equal(2012);
+			expect(goodLuck.getYearOfAdmission('Goodluck')).to.be.equal(2017);
 		});
 		it("class instance should be an object", function () {
 			expect(goodLuck.getStudentInfo('Goodluck')).to.be.deep.equal(studentInfo);
 		});
-		it("should return the expected year of graduation", function () {
+		it("should return the expected years of remaining for study", function () {
 			expect(goodLuck.graduate('Goodluck', 2019)).to.be.equal(2);
+		});
+		it("should respond that the student have graduated", function () {
+			expect(goodLuck.graduate('Goodluck', 2021)).to.be.equal('Graduated');
 		});
 	});
 });

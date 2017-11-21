@@ -11,31 +11,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // create super student class
 
 var Student = exports.Student = function () {
-	function Student(name, dateOfAdminssion, nameOfSchool, durationOfStudy) {
+	function Student(name, dateOfAdmission, nameOfSchool, durationOfStudy) {
 		_classCallCheck(this, Student);
 
-		var now = new Date();
-		now = now.getFullYear();
+		//let now = new Date();
+		//now = now.getFullYear();
 		this.name = name;
-		this.dateOfAdminssion = dateOfAdminssion;
+		this.dateOfAdmission = dateOfAdmission;
 		this.nameOfSchool = nameOfSchool;
 		// digit represent the years
 		this.durationOfStudy = durationOfStudy;
-		this.expectedToGraduate = now + this.durationOfStudy;
+		this.expectedToGraduate = dateOfAdmission + this.durationOfStudy;
 	}
 
 	_createClass(Student, [{
 		key: 'admitted',
-		value: function admitted(name, dateOfAdminssion, nameOfSchool) {
-			if (this.name === name && this.dateOfAdminssion === dateOfAdminssion && this.nameOfSchool === nameOfSchool) {
+		value: function admitted(name, dateOfAdmission, nameOfSchool) {
+			if (this.name === name && this.dateOfAdmission === dateOfAdmission && this.nameOfSchool === nameOfSchool) {
 				return true;
 			}
 		}
 	}, {
-		key: 'getYearOfAdminssion',
-		value: function getYearOfAdminssion(name) {
+		key: 'getYearOfAdmission',
+		value: function getYearOfAdmission(name) {
 			if (this.name === name) {
-				return this.dateOfAdminssion;
+				return this.dateOfAdmission;
 			}
 		}
 	}, {
@@ -44,7 +44,7 @@ var Student = exports.Student = function () {
 			if (this.name === name) {
 				return {
 					'name': this.name,
-					'dateOfAdminsion': this.dateOfAdminssion,
+					'dateOfAdmision': this.dateOfAdmission,
 					'nameOfSchool': this.nameOfSchool,
 					'durationOfStudy': this.durationOfStudy
 				};
@@ -54,7 +54,12 @@ var Student = exports.Student = function () {
 		key: 'graduate',
 		value: function graduate(name, currentYear) {
 			if (this.name === name) {
-				return this.expectedToGraduate - currentYear;
+				var yearsRemaining = this.expectedToGraduate - currentYear;
+				if (yearsRemaining === 0) {
+					return 'Graduated';
+				} else {
+					return yearsRemaining;
+				}
 			}
 		}
 	}]);
