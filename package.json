@@ -1,0 +1,34 @@
+{
+  "name": "studentclass",
+  "version": "1.0.0",
+  "description": "studentclass in an oop implementation that model the method and behavior of stuents",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha trans/test/test.js",
+    "build": "babel main -s -d trans"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutugodfrey/StudentClass.git"
+  },
+  "keywords": [
+    "js",
+    "mocha",
+    "opp",
+    "class"
+  ],
+  "author": "Tutu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tutugodfrey/StudentClass/issues"
+  },
+  "homepage": "https://github.com/tutugodfrey/StudentClass#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
