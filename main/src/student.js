@@ -1,7 +1,7 @@
 
 // create super student class
 
-export class Student {
+export default class Student {
 	constructor(name, dateOfAdmission, nameOfSchool, durationOfStudy ) {
 		//let now = new Date();
 		//now = now.getFullYear();
@@ -11,6 +11,9 @@ export class Student {
 		// digit represent the years
 		this.durationOfStudy = durationOfStudy;
 		this.expectedToGraduate = dateOfAdmission+ this.durationOfStudy
+	}
+	static welcome(schoolName, nameOfNewStudent) {
+		return `You are welcome to ${schoolName} ${nameOfNewStudent}! We hope you will enjoy you study`
 	}
 	admitted(name, dateOfAdmission, nameOfSchool) {
 		if(this.name !== name) {
@@ -49,6 +52,15 @@ export class Student {
 				return yearsRemaining;
 			}
 		} 
+	}
 
+	failExam(){
+		return "You are on probation";
 	}
 } 
+
+
+const goodLuck = new Student('Goodluck', 2017, 'Delsu', 4 );
+console.log(goodLuck.failExam())
+console.log(goodLuck.getStudentInfo('Goodluck'))
+

@@ -10,7 +10,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 // create super student class
 
-var Student = exports.Student = function () {
+var Student = function () {
 	function Student(name, dateOfAdmission, nameOfSchool, durationOfStudy) {
 		_classCallCheck(this, Student);
 
@@ -71,8 +71,25 @@ var Student = exports.Student = function () {
 				}
 			}
 		}
+	}, {
+		key: 'failExam',
+		value: function failExam() {
+			return "You are on probation";
+		}
+	}], [{
+		key: 'welcome',
+		value: function welcome(schoolName, nameOfNewStudent) {
+			return 'You are welcome to ' + schoolName + ' ' + nameOfNewStudent + '! We hope you will enjoy you study';
+		}
 	}]);
 
 	return Student;
 }();
+
+exports.default = Student;
+
+
+var goodLuck = new Student('Goodluck', 2017, 'Delsu', 4);
+console.log(goodLuck.failExam());
+console.log(goodLuck.getStudentInfo('Goodluck'));
 //# sourceMappingURL=student.js.map
