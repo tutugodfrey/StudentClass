@@ -10,11 +10,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var expect = _chai2.default.expect;
 
-var goodLuck = new _student.Student("Goodluck", 2012, "Delsu");
+var goodLuck = new _student.Student("Goodluck", 2012, "Delsu", 4);
 var studentInfo = {
 	'name': 'Goodluck',
 	'dateOfAdminsion': 2012,
-	'nameOfSchool': 'Delsu'
+	'nameOfSchool': 'Delsu',
+	'durationOfStudy': 4
 };
 
 describe("Student class", function () {
@@ -33,6 +34,9 @@ describe("Student class", function () {
 		});
 		it("class instance should be an object", function () {
 			expect(goodLuck.getStudentInfo('Goodluck')).to.be.deep.equal(studentInfo);
+		});
+		it("should return the expected year of graduation", function () {
+			expect(goodLuck.graduate('Goodluck', 2019)).to.be.equal(2);
 		});
 	});
 });

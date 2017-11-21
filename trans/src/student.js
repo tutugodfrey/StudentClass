@@ -11,12 +11,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // create super student class
 
 var Student = exports.Student = function () {
-	function Student(name, dateOfAdminssion, nameOfSchool) {
+	function Student(name, dateOfAdminssion, nameOfSchool, durationOfStudy) {
 		_classCallCheck(this, Student);
 
+		var now = new Date();
+		now = now.getFullYear();
 		this.name = name;
 		this.dateOfAdminssion = dateOfAdminssion;
 		this.nameOfSchool = nameOfSchool;
+		// digit represent the years
+		this.durationOfStudy = durationOfStudy;
+		this.expectedToGraduate = now + this.durationOfStudy;
 	}
 
 	_createClass(Student, [{
@@ -40,8 +45,16 @@ var Student = exports.Student = function () {
 				return {
 					'name': this.name,
 					'dateOfAdminsion': this.dateOfAdminssion,
-					'nameOfSchool': this.nameOfSchool
+					'nameOfSchool': this.nameOfSchool,
+					'durationOfStudy': this.durationOfStudy
 				};
+			}
+		}
+	}, {
+		key: 'graduate',
+		value: function graduate(name, currentYear) {
+			if (this.name === name) {
+				return this.expectedToGraduate - currentYear;
 			}
 		}
 	}]);
