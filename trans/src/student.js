@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -11,19 +11,41 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 // create super student class
 
 var Student = exports.Student = function () {
-	function Student(name) {
+	function Student(name, dateOfAdminssion, nameOfSchool) {
 		_classCallCheck(this, Student);
 
 		this.name = name;
+		this.dateOfAdminssion = dateOfAdminssion;
+		this.nameOfSchool = nameOfSchool;
 	}
 
 	_createClass(Student, [{
-		key: "register",
-		value: function register() {}
+		key: 'admitted',
+		value: function admitted(name, dateOfAdminssion, nameOfSchool) {
+			if (this.name === name && this.dateOfAdminssion === dateOfAdminssion && this.nameOfSchool === nameOfSchool) {
+				return true;
+			}
+		}
+	}, {
+		key: 'getYearOfAdminssion',
+		value: function getYearOfAdminssion(name) {
+			if (this.name === name) {
+				return this.dateOfAdminssion;
+			}
+		}
+	}, {
+		key: 'getStudentInfo',
+		value: function getStudentInfo(name) {
+			if (this.name === name) {
+				return {
+					'name': this.name,
+					'dateOfAdminsion': this.dateOfAdminssion,
+					'nameOfSchool': this.nameOfSchool
+				};
+			}
+		}
 	}]);
 
 	return Student;
 }();
-
-var name = exports.name = "godfrey";
 //# sourceMappingURL=student.js.map
