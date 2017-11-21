@@ -1,11 +1,18 @@
 import chai from 'chai';
-import student from './../src/student';
+import  { Student } from './../src/student';
+import { name } from './../src/student';
 const  expect = chai.expect;
 
-describe ("student class", () => {
-	describe("valid input", () => {
+const goodLuck = new Student("Goodluck");
+
+describe ("Student class", () => {
+	describe("Student", () => {
 		it("should export a function", () => {
-			expect(Student("name").to.be("function"))
-		})
+			expect(Student).to.be.a("function")
+		});
+		it("class instance should be an object", () => {
+			expect(goodLuck).to.be.an("Object")
+		});
 	})
-})
+});
+

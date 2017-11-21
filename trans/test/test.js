@@ -6,16 +6,19 @@ var _chai2 = _interopRequireDefault(_chai);
 
 var _student = require('./../src/student');
 
-var _student2 = _interopRequireDefault(_student);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var expect = _chai2.default.expect;
 
-describe("student class", function () {
-	describe("valid input", function () {
+var goodLuck = new _student.Student("Goodluck");
+
+describe("Student class", function () {
+	describe("Student", function () {
 		it("should export a function", function () {
-			expect(Student("name").to.be("function"));
+			expect(_student.Student).to.be.a("function");
+		});
+		it("class instance should be an object", function () {
+			expect(goodLuck).to.be.an("Object");
 		});
 	});
 });

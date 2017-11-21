@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"student.js","sourcesContent":[]}
+{"version":3,"sources":["../../main/src/student.js"],"names":["Student","name"],"mappings":";;;;;;;;;;AACA;;IAEaA,O,WAAAA,O;AACZ,kBAAYC,IAAZ,EAAkB;AAAA;;AACjB,OAAKA,IAAL,GAAYA,IAAZ;AACA;;;;6BACU,CAEV;;;;;;AAIK,IAAMA,sBAAO,SAAb","file":"student.js","sourcesContent":["\r\n// create super student class\r\n\r\nexport class Student {\r\n\tconstructor(name) {\r\n\t\tthis.name = name;\r\n\t}\r\n\tregister() {\r\n\r\n\t}\r\n\r\n}  \r\n\r\nexport const name = \"godfrey\";"]}
